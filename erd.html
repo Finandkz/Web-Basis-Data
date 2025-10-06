@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apa Itu Basis Data?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+<body class="basisdata">
+
+<nav>
+  <div class="garistiga" onclick="toggleMenu()">&#9776;</div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="profile.html">Profile</a>
+    <a href="https://ubpkarawang.ac.id/" target="_blank">
+      <abbr title="Universitas Buana Perjuangan Karawang">UBP KARAWANG </abbr></a>
+  </div>
+</nav>
+
+
+  <header class="detail-header">
+    <h1 style="font-size: 32px;">Apa Itu Attribute, Entitas dan Relasi dalam ERD?</h1>
+  </header>
+
+  <article class="detail-content">
+  <div class="detail-img" style="background-image: url('https://i.pinimg.com/736x/c4/18/5b/c4185be9987e1b97257fa43e0798b35a.jpg');"></div>
+    <h3>Entitas</h3>
+    <p style="text-indent:30px  ;">Entitas adalah objek atau sesuatu yang dapat dikenali dan memiliki data yang perlu disimpan dalam sistem. Entitas bisa berupa orang, benda, tempat, atau peristiwa. Misalnya, dalam sistem akademik ada entitas Mahasiswa, Dosen, dan Mata Kuliah.</p>
+    <h3>Attribute</h3>
+    <p style="text-indent:30px  ;">Attribute adalah informasi atau karakteristik yang dimiliki oleh entitas. Atribut menjelaskan lebih detail mengenai entitas tersebut. Contohnya, entitas Mahasiswa memiliki atribut NIM, Nama, Alamat, dan Tanggal Lahir.</p>
+    <h3>Relasi</h3>
+    <p style="text-indent:30px  ;">Relasi adalah hubungan antara satu entitas dengan entitas lain yang menunjukkan keterkaitan data di dalam sistem. Contohnya, entitas Mahasiswa berelasi dengan Mata Kuliah melalui hubungan Mengambil, yang berarti mahasiswa dapat mengambil beberapa mata kuliah dan satu mata kuliah bisa diambil oleh banyak mahasiswa.</p>
+    
+    <h3>Penjelasan Singkat:</h3>
+    <ul>
+      <li>Entitas = objek utama yang datanya disimpan,</li>
+      <li>Atribut = informasi detail dari entitas,</li>
+      <li>Relasi = hubungan antar entitas dalam sistem.</li>
+    </ul>
+    
+    <h3>Contoh Kasus :</h3>
+    <h4>Sistem Akademik: Relasi Mahasiswa dengan Mata Kuliah</h4>
+    <p>Mahasiswa sebagai entitas mewakili setiap individu yang terdaftar di perguruan tinggi. Data yang melekat pada mahasiswa dicatat dalam bentuk atribut, misalnya NIM (Nomor Induk Mahasiswa), Nama, Alamat, dan Tanggal Lahir. Atribut ini berfungsi untuk memberikan identitas dan informasi detail mengenai mahasiswa.</p>
+    <p>Mata Kuliah sebagai entitas mewakili setiap pelajaran atau kelas yang disediakan kampus. Mata kuliah juga memiliki atribut, seperti KodeMK (Kode Mata Kuliah), NamaMK (Nama Mata Kuliah), dan SKS (jumlah beban studi). Atribut ini menjelaskan detail setiap mata kuliah.</p>
+    <p>Kedua entitas tersebut dihubungkan oleh relasi "Mengambil". Relasi ini menggambarkan interaksi antara mahasiswa dengan mata kuliah. Artinya, seorang mahasiswa bisa mengambil banyak mata kuliah, dan sebuah mata kuliah bisa diambil oleh banyak mahasiswa. Relasi ini sangat penting karena menunjukkan bagaimana data mahasiswa dan data mata kuliah saling terhubung di dalam sistem.</p>
+  </article>
+
+</body>
+</html>
