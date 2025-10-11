@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apa Itu Primary Key, Foregent Key, Candidate Key?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+<body class="key">
+
+ <nav>
+  <div class="garistiga" onclick="toggleMenu()">&#9776;</div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="profile.html">Profile</a>
+    <a href="https://ubpkarawang.ac.id/" target="_blank">
+      <abbr title="Universitas Buana Perjuangan Karawang">UBP KARAWANG </abbr></a>
+  </div>
+</nav>
+
+
+  <header class="detail-header">
+    <h1>Apa Itu Primary Key, Foregent Key, Candidate Key?</h1>
+  </header>
+
+  <article class="detail-content">
+   <div class="detail-img" style="background-image: url('https://www.datanamic.com/images/how-to-choose-pk.webp');"></div>
+    <h3>Primary Key</h3>
+    <p style="text-indent:30px  ;">Primary Key adalah kunci utama dalam sebuah tabel yang berfungsi untuk membedakan setiap baris data agar unik dan tidak ada yang sama. Setiap tabel di dalam basis data harus memiliki satu Primary Key yang digunakan sebagai identitas tunggal setiap record (baris). Nilai dari Primary Key tidak boleh kosong (NULL) dan tidak boleh ada duplikasi, karena berfungsi sebagai identifikasi utama untuk pencarian, pengeditan, maupun penghapusan data.</p>
+    <p style="text-indent:30px  ;">Primary Key biasanya berbentuk seperti kode unik, misalnya id_mahasiswa, id_barang, id_pelanggan, dan lain-lain. Kunci ini juga membantu menghubungkan tabel lain melalui Foreign Key.</p>
+    <p><b>Ciri-Ciri Primary Key</b></p>
+    <ul>
+        <li>Hanya ada satu Primary Key dalam setiap tabel.</li>
+        <li>Nilainya unik untuk setiap baris.</li>
+        <li>Tidak boleh bernilai NULL.</li>
+        <li>Dapat dijadikan acuan untuk Foreign Key di tabel lain</li>
+    </ul>
+    <h3>Contoh Penerapan Primary Key dalam ERD</h3>
+    <ul>
+      <li><b>Tabel "Siswa"</b></li>
+      <img src="img workbench/Primarykey_siswa.png" alt="tabel siswa" class="foto-workbench">
+      <p>Primary Key :idsiswa <br>Dalam ERD,idsiswa menjadi kunci unik yang mengidentifikasi setiap siswa dalam tabel.</p>
+      <li><b>Tabel "Kehadiran"</b></li>
+      <img src="img workbench/Primarykey_kehadiran.png" alt="tabel kehadiran" class="foto-workbench">
+      <p>Primary Key :id_kehadiran <br>Dalam ERD,id_kehadiran menjadi kunci unik yang mengidentifikasi setiap kehadiran siswa dalam tabel.</p>
+      <li><b>Tabel "Dokter"</b></li>
+      <img src="img workbench/Primarykey_dokter.png" alt="tabel dokter" class="foto-workbench">
+      <p>Primary Key :id_dokter <br>Dalam ERD,id_dokter menjadi kunci unik yang mengidentifikasi dokter dalam tabel.</p>
+      <li><b>Tabel "Pasien"</b></li>
+      <img src="img workbench/Primarykey_pasien.png" alt="tabel pasien" class="foto-workbench">
+      <p>Primary Key :id_pasien <br>Dalam ERD,id_pasien menjadi kunci unik yang mengidentifikasi setiap pasien dalam tabel.</p>
+      <li><b>Tabel "Karyawan"</b></li>
+      <img src="img workbench/Primarykey_karyawan.png" alt="tabel karyawan" class="foto-workbench">
+      <p>Primary Key :idkaryawan <br>Dalam ERD,idkaryawan menjadi kunci unik yang mengidentifikasi setiap karyawan dalam tabel.</p>
+    </ul>
+
+    <h3>Foregent Key</h3>
+    <p style="text-indent:30px  ;">Foreign Key adalah atribut dalam sebuah tabel yang menjadi penghubung dengan tabel lain. Foreign Key ini berfungsi untuk menciptakan relasi antar tabel, di mana nilai Foreign Key berasal dari Primary Key tabel lain. Dengan adanya Foreign Key, database menjadi terstruktur dan terhindar dari data yang terpisah-pisah tanpa hubungan.</p>
+    <p style="text-indent:30px  ;">Foreign Key sangat penting dalam konsep relational database, karena menghubungkan antar entitas seperti Mahasiswa dengan Kelas, Pelanggan dengan Pesanan, atau Barang dengan Supplier. Jika Foreign Key dihapus atau berubah, maka data yang berelasi juga bisa terpengaruh — inilah yang disebut dengan referential integrity (integritas referensial).</p>
+    <p><b>Ciri-Ciri Foregent Key</b></p>
+    <ul>
+        <li>Nilainya boleh sama di beberapa baris (karena bisa banyak data yang mengacu ke satu data di tabel lain).</li>
+        <li>Dapat bernilai NULL (jika tidak wajib ada relasi).</li>
+        <li>Selalu mengacu pada Primary Key di tabel lain.</li>
+    </ul>
+    <h3>Contoh Penerapan Foregent Key dalam ERD</h3>
+    <ul>
+      <li><b>Hubungan antara Tabel "Kehadiran" dan "Siswa"</b></li>
+      <img src="img workbench/ForegentKey_siswa.png" alt="tabel kehadiran dan siswa" class="foto-workbench">
+      <p>Dalam ERD sistem akademik ini, tabel "Kehadiran" memiliki Foreign Key dalam bentuk atribut "siswa_idsiswa" yang merujuk ke Primary Key "idsiswa" dalam tabel "Siswa" Hal ini memungkinkan kita untuk mengidentifikasi siswa yang bertanggung jawab atas status kehadiran tertentu.</p>
+      <li><b>Hubungan antara Tabel "Kartu identitas" dan "Karyawan"</b></li>
+      <img src="img workbench/ForegentKey_karyawan.png" alt="tabel kartu identisa dan karyawan" class="foto-workbench">
+      <p>Dalam ERD sistem Perkantoran ini, tabel "kartu_identitas" memiliki Foreign Key dalam bentuk atribut "karyawan_idkaryawan" yang merujuk ke Primary Key "idkaryawan" dalam tabel "karyawan" Hal ini memungkinkan kita untuk mengidentifikasi karyawan yang bertanggung jawab atas kartu identitasnya</p>
+      <li><b>Hubungan antara Tabel "Dokter" dan "Pasien"</b></li>
+      <img src="img workbench/ForegentKey_dokter.png" alt="tabel Dokter dan Pasien" class="foto-workbench">
+      <p>Dalam ERD sistem Rumah sakit ini, tabel "Pasien" memiliki Foreign Key dalam bentuk atribut "DOKTER_id_dokter" yang merujuk ke Primary Key "id_dokter" dalam tabel "DOKTER" Hal ini memungkinkan kita untuk mengidentifikasi dokter yang bertanggung jawab atas setiap data pasien.</p>
+      <li><b>Hubungan antara Tabel "Kategori" dan "Produk"</b></li>
+      <img src="img workbench/ForegentKey_produk.png" alt="tabel kategori dan produk" class="foto-workbench">
+      <p>Dalam ERD sistem penjualan ini, tabel "produk" memiliki Foreign Key dalam bentuk atribut "kategori_idkategori" yang merujuk ke Primary Key "idkategori" dalam tabel "kategori" Hal ini memungkinkan kita untuk mengidentifikasi kategori yang bertanggung jawab mengkelompokkan beberapa produk.</p>
+      <li><b>Hubungan antara Tabel "Barang" dan "Suplier"</b></li>
+      <img src="img workbench/ForegentKey_suplier.png" alt="tabel barang dan suplier" class="foto-workbench">
+      <p>Dalam ERD sistem inventaris atau penjualan ini, tabel "barang" memiliki Foreign Key dalam bentuk atribut "suplier_idsuplier" yang merujuk ke Primary Key "idsuplier" dalam tabel "suplier" Hal ini memungkinkan kita untuk mengidentifikasi pemasok (supplier) yang menyediakan barang tertentu.</p>
+    </ul>
+    <h3>Candidate Key</h3>
+
+    <p style="text-indent:30px  ;">Candidate Key adalah atribut atau kombinasi atribut yang berpotensi menjadi Primary Key, karena mampu mengidentifikasi data secara unik dalam tabel. Namun, hanya satu dari Candidate Key yang nantinya akan dipilih sebagai Primary Key. Candidate Key bisa lebih dari satu dalam satu tabel, tergantung pada data apa yang dianggap unik.</p>
+    <p style="text-indent:30px  ;">Misalnya dalam tabel Mahasiswa, terdapat dua atribut yang unik: id_mahasiswa dan NIM. Keduanya bisa membedakan setiap mahasiswa secara unik, tetapi hanya satu yang dipilih menjadi Primary Key (biasanya id_mahasiswa), sementara NIM tetap menjadi Candidate Key.</p>
+    <p><b>Ciri-Ciri Candidate Key</b></p>
+    <ul>
+        <li>Dapat digunakan untuk mengidentifikasi baris secara unik.</li>
+        <li>Tidak boleh bernilai NULL atau duplikat.</li>
+        <li>Bisa ada lebih dari satu dalam satu tabel.</li>
+        <li>Satu di antaranya akan dipilih menjadi Primary Key.</li>
+    </ul>
+    <h3>Contoh Penerapan Candidate Key dalam ERD</h3>
+    <ul>
+      <li><b>Tabel "Dokter"</b></li>
+      <img src="img workbench/CandidateKey_Dokter.png" alt="" class="foto-workbench">
+      <p>Dalam ERD sistem Rumah Sakit, tabel "DOKTER" memiliki minimal dua Candidate Key, yaitu "id_dokter" dan "no_tlpn". Kedua atribut ini memenuhi syarat sebagai kunci unik yang dapat digunakan untuk mengidentifikasi setiap dokter secara unik.</p>
+      <li><b>Tabel "Pasien"</b></li>
+      <img src="img workbench/CandidateKey_Pasien.png" alt="" class="foto-workbench">
+      <p>Dalam ERD sistem Rumah Sakit, tabel "PASIEN" memiliki minimal dua Candidate Key, yaitu "id_pasien" dan "no_tlpn". Kedua atribut ini memenuhi syarat sebagai kunci unik yang dapat digunakan untuk mengidentifikasi setiap pasien secara unik.</p>
+      <li><b>Tabel "Karyawan"</b></li>
+      <img src="img workbench/CandidateKey_Karyawan.png" alt="" class="foto-workbench">
+      <p>Dalam ERD sistem Perkantoran, tabel "Karyawan" memiliki minimal dua Candidate Key, yaitu "idkaryawan" dan "email". Kedua atribut ini memenuhi syarat sebagai kunci unik yang dapat digunakan untuk mengidentifikasi setiap karyawan secara unik.</p>
+      <li><b>Tabel "Siswa"</b></li>
+      <img src="img workbench/CandidateKey_Siswa.png" alt="" class="foto-workbench">
+      <p>Dalam ERD sistem akademik, tabel "Siswa" memiliki minimal dua Candidate Key, yaitu "idsiswa" dan "nisn" (Nomor Induk Siswa Nasional). Kedua atribut ini memenuhi syarat sebagai kunci unik yang dapat digunakan untuk mengidentifikasi setiap siswa secara unik.</p>
+      <li><b>Tabel "Suplier"</b></li>
+      <img src="img workbench/CandidateKey_Suplier.png" alt="" class="foto-workbench">
+      <p>Dalam ERD sistem inventaris atau Penjualan, tabel "Suplier" memiliki minimal dua Candidate Key, yaitu "idsuplier" dan "telepon". Kedua atribut ini memenuhi syarat sebagai kunci unik yang dapat digunakan untuk mengidentifikasi setiap suplier secara unik.</p>
+    </ul>
+  </article>
+
+
+</body>
+</html>

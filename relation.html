@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apa Itu Relation pada ERD?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+<body class="relation">
+
+ <nav>
+  <div class="garistiga" onclick="toggleMenu()">&#9776;</div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="profile.html">Profile</a>
+    <a href="https://ubpkarawang.ac.id/" target="_blank">
+      <abbr title="Universitas Buana Perjuangan Karawang">UBP KARAWANG </abbr></a>
+  </div>
+</nav>
+
+
+  <header class="detail-header">
+    <h1>Apa Itu Relation pada ERD?</h1>
+  </header>
+
+  <article class="detail-content">
+   <div class="detail-img" style="background-image: url('https://cdn.prod.website-files.com/5d8a2888296e91abbdcb65f0/685265b626ed91ed81dbfcd1_erd_adalah-Denny.webp');"></div>
+    <p style="text-indent:30px  ;">Relation (Relasi) dalam Entity Relationship Diagram (ERD) adalah hubungan atau keterkaitan antara dua atau lebih entitas. Relasi ini menunjukkan bagaimana satu data dalam entitas berhubungan dengan data di entitas lain. Dalam ERD, relasi biasanya digambarkan dengan garis penghubung antara dua entitas yang memiliki hubungan logis.</p>
+    <p style="text-indent:30px  ;">Misalnya, entitas Mahasiswa berhubungan dengan entitas MataKuliah melalui relasi Mengambil, artinya satu mahasiswa dapat mengambil beberapa mata kuliah, dan satu mata kuliah dapat diambil oleh banyak mahasiswa.</p>
+    <h3>Jenis-Jenis Relasi dalam ERD:</h3>
+    <ol>
+        <li>One-to-One(1:1)
+            <ul>
+                <li>Setiap baris pada entitas A hanya berhubungan dengan satu baris pada entitas B.</li>
+                <li>Contoh: Satu orang hanya memiliki satu KTP.</li>
+            </ul>
+        </li>
+        <li>One-to-Many(1:M)
+            <ul>
+                <li>Satu entitas di tabel A bisa terhubung dengan banyak entitas di tabel B, tapi tidak sebaliknya.</li>
+                <li>Contoh: Satu dosen dapat mengajar banyak mahasiswa.</li>
+            </ul>
+        </li>
+        <li>Many-to-Many(M:N)
+            <ul>
+                <li>Banyak entitas dari tabel A bisa terhubung dengan banyak entitas dari tabel B.</li>
+                <li>Contoh: Banyak mahasiswa mengambil banyak mata kuliah.</li>
+            </ul>
+        </li>
+    </ol>
+    <h3>Mengapa Many-to-Many Tidak Baik Digunakan pada ERD?</h3>
+    <p style="text-indent:30px  ;">Relasi Many-to-Many (M:N) dianggap tidak efisien dan sulit diimplementasikan secara langsung dalam database relasional. Sistem basis data seperti MySQL, PostgreSQL, atau Oracle tidak bisa menyimpan relasi M:N secara langsung karena tidak mungkin satu kolom berisi banyak referensi ke tabel lain.</p>
+    <p>Selain itu,Many-to-Many bisa menyebabkan:</p>
+    <ul>
+        <li>Duplikasi data, karena satu entitas bisa muncul berulang kali.</li>
+        <li>Kesulitan dalam pemeliharaan, misalnya saat memperbarui atau menghapus data.</li>
+        <li>Kesalahan relasi, karena sulit menjaga integritas data (referential integrity).</li>
+    </ul>
+  </article>
+
+</body>
+</html>

@@ -174,8 +174,7 @@ abbr {
       height: 400px;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover; 
-      background-color: #000;   
+      background-size: cover;    
       margin-bottom: 20px;
 }
 
@@ -315,41 +314,49 @@ abbr {
 }
 
 body.index {
-  background: url("index.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/index.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
 body.profile {
-  background: url("profil.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/profil.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
 body.basisdata {
-  background: url("basisdata.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/basisdata.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
 body.harapan {
-  background: url("harapan.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/harapan.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
 body.conseptual {
-  background: url("conseptual.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/conseptual.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
 body.physical {
-  background: url("Physical.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/Physical.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
 body.vidio {
-  background: url("Vidio.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/Vidio.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 body.erd {
-  background: url("Erd.jpeg") no-repeat center center fixed;
+  background: url("img\ bg/Erd.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+body.key {
+  background: url("https://i.pinimg.com/1200x/7a/f5/fb/7af5fb3d4617da14c9b3a40fa98d4a05.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+body.relation {
+  background: url("https://i.pinimg.com/1200x/24/f2/f2/24f2f216b5501a13b66f79f20280587b.jpg ") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -378,3 +385,12 @@ body.erd {
     text-align: center;
   }
 }
+
+.detail-content img.foto-workbench {
+  display: block;
+  max-width: 100%; 
+  height: auto;
+  margin: 12px auto;
+  border-radius: 8px; 
+}
+
