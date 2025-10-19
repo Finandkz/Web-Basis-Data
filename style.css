@@ -164,7 +164,10 @@ abbr {
   padding-left: 20px;
   margin: 10px 0;
 }
-
+.detail-content ol {
+  padding-left: 20px;
+  margin: 10px 0;
+}
 .detail-content ul li {
   margin: 6px 0;
 }
@@ -342,7 +345,7 @@ body.physical {
   background-size: cover;
 }
 
-body.vidio {
+body.dbms {
   background: url("img\ bg/Vidio.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -355,7 +358,15 @@ body.key {
   background-size: cover;
 }
 body.relation {
-  background: url("https://i.pinimg.com/1200x/24/f2/f2/24f2f216b5501a13b66f79f20280587b.jpg ") no-repeat center center fixed;
+  background: url("https://i.pinimg.com/1200x/24/f2/f2/24f2f216b5501a13b66f79f20280587b.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+body.intersection {
+  background: url("https://i.pinimg.com/736x/a5/86/65/a58665b1dc65eca3c3334167765edc40.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+body.normalisasi {
+  background: url("https://i.pinimg.com/736x/7b/c6/b9/7bc6b96c64ad504db034016e8d34463b.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 

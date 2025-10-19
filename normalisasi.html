@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apa Itu Relation pada ERD?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+<body class="normalisasi">
+
+ <nav>
+  <div class="garistiga" onclick="toggleMenu()">&#9776;</div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="profile.html">Profile</a>
+    <a href="https://ubpkarawang.ac.id/" target="_blank">
+      <abbr title="Universitas Buana Perjuangan Karawang">UBP KARAWANG </abbr></a>
+  </div>
+</nav>
+
+
+  <header class="detail-header">
+    <h1>Apa Itu Normalisasi pada ERD?</h1>
+  </header>
+
+  <article class="detail-content">
+   <div class="detail-img" style="background-image: url('https://pusdasi.uma.ac.id/wp-content/uploads/2024/06/IMG-20240623-WA0004-685x385.jpg');"></div>
+    <p style="text-indent:30px  ;">Normalisasi adalah serangkaian aturan atau tahapan yang bertujuan untuk mengeliminasi redundansi data dan memastikan data disimpan dengan cara yang efisien dan konsisten. Proses normalisasi terdiri dari beberapa bentuk normal (normal forms), dari 1NF (First Normal Form) hingga 5NF (Fifth Normal Form), meskipun yang paling umum digunakan adalah hingga 3NF (Third Normal Form).</p>
+    <h3>Pentingnya Normalisasi dalam ERD:</h3>
+    <ol>
+        <li>Mengurangi Redundansi Data Dengan normalisasi, data yang redundan atau duplikat dapat dikurangi secara signifikan. Hal ini berarti bahwa informasi yang sama tidak perlu disimpan di lebih dari satu tempat. Sebagai contoh, dalam sebuah sistem manajemen sekolah, informasi tentang siswa hanya perlu disimpan sekali dalam tabel siswa, dan tidak perlu diduplikasi dalam tabel lain.</li>
+        <li>Memastikan Integritas Data Normalisasi membantu menjaga integritas data dengan memastikan bahwa setiap bagian data hanya disimpan sekali. Ini mengurangi risiko inkonsistensi data yang dapat terjadi jika data yang sama diperbarui di beberapa tempat. Sebagai contoh, jika alamat seorang siswa berubah, perubahan tersebut hanya perlu dilakukan di satu tempat.</li>
+        <li>Mempermudah Pemeliharaan Data Dengan data yang terorganisir dengan baik, pemeliharaan data menjadi lebih mudah. Proses seperti pembaruan, penghapusan, dan penambahan data dapat dilakukan dengan lebih efisien dan dengan risiko kesalahan yang lebih kecil.</li>
+        <li>Meningkatkan Kinerja Basis Data Basis data yang ternormalisasi cenderung memiliki kinerja yang lebih baik karena struktur tabel yang lebih sederhana dan kueri yang lebih efisien. Ini karena sistem basis data tidak perlu mencari dan menggabungkan data yang tersebar di banyak tempat.</li>
+        <li>Meningkatkan Fleksibilitas Desain Basis Data Normalisasi membantu dalam merancang basis data yang lebih fleksibel. Ketika ada perubahan dalam persyaratan bisnis, basis data yang ternormalisasi lebih mudah diubah dan diperluas tanpa harus melakukan perubahan besar pada struktur yang ada.</li>
+    </ol>
+    <h3>Implementasi Normalisasi dalam ERD</h3>
+    <ol>
+        <li>Identifikasi Entitas dan Atributnya Langkah pertama adalah mengidentifikasi semua entitas yang relevan dan atribut-atribut yang melekat pada setiap entitas.</li>
+        <li>Tentukan Kunci Utama Pilih atribut yang akan menjadi kunci utama untuk setiap entitas. Kunci utama adalah atribut yang unik untuk setiap entitas.</li>
+        <li>Pecah Tabel yang Mengandung Redundansi Jika ada tabel yang mengandung redundansi data, pecah tabel tersebut menjadi beberapa tabel yang lebih kecil sesuai dengan aturan normalisasi.</li>
+        <li>Tetapkan Hubungan Antar Entitas Gunakan ERD untuk menggambarkan hubungan antar entitas yang telah ternormalisasi.</li>
+    </ol>
+    <h3>Kesimpulan</h3>
+    <p style="text-indent:30px  ;">Normalisasi dalam ERD adalah proses menyusun dan membagi data ke dalam tabel-tabel yang lebih teratur agar tidak terjadi pengulangan, kesalahan data, dan anomali (kejanggalan) saat input, edit, atau hapus data. Dengan normalisasi, struktur database menjadi lebih logis, rapi, dan mudah dikelola.</p>
+  </article>
+
+</body>
+</html>
