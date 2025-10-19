@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apa Itu Conceptual DB?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+<body class="conseptual">
+
+<nav>
+  <div class="garistiga" onclick="toggleMenu()">&#9776;</div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="profile.html">Profile</a>
+    <a href="https://ubpkarawang.ac.id/" target="_blank">
+      <abbr title="Universitas Buana Perjuangan Karawang">UBP KARAWANG </abbr></a>
+  </div>
+</nav>
+
+
+  <header class="detail-header">
+    <h1>Apa Itu Conceptual DB ?</h1>
+  </header>
+
+  <article class="detail-content">
+  <div class="detail-img" style="background-image: url('https://i.pinimg.com/1200x/29/0a/90/290a90801564daf0c60f81793123c4e9.jpg');"></div>
+    <p style="text-indent:30px  ;">Conceptual database, sering disebut conceptual DB, adalah gambaran abstrak yang menunjukkan struktur keseluruhan data serta keterkaitan antar entitas tanpa menyoroti detail teknis implementasi. Pada tahap ini, perancangan basis data disusun secara konseptual menggunakan model tertentu, misalnya Entity Relationship Diagram (ERD), yang menjelaskan hubungan antara entitas, atribut, dan relasi. Model konseptual berfungsi sebagai perantara antara kebutuhan pengguna dengan rancangan logis basis data. Dengan demikian, conceptual DB memiliki peranan penting untuk memastikan bahwa kebutuhan informasi telah terwakili secara menyeluruh sebelum basis data dikembangkan lebih lanjut ke dalam desain logis maupun fisik.</p>
+    
+    <p style="text-indent:30px  ;">Model konseptual biasanya digambarkan dalam bentuk Entity Relationship Diagram (ERD), yang memuat:</p>
+    <ul>
+      <li>Entitas → objek nyata atau konsep penting (misalnya: Mahasiswa, Mata Kuliah, Dosen).</li>
+      <li>Atribut → ciri atau informasi yang melekat pada entitas (misalnya: NIM, nama, alamat untuk Mahasiswa).</li>
+      <li>Relasi → hubungan antar entitas (misalnya: Mahasiswa “mengambil” Mata Kuliah).</li>
+      <li>Kardinalitas → jumlah keterlibatan antar entitas (satu mahasiswa bisa mengambil banyak mata kuliah, satu dosen bisa mengajar banyak kelas, dan seterusnya).</li>
+    </ul>
+    
+    <p style="text-indent:30px  ;">Keberadaan model ini sangat penting. Selain mempermudah komunikasi antara desainer database, pengembang, dan pengguna, model konseptual juga mengurangi risiko kesalahan desain. Tidak hanya itu, sifatnya yang fleksibel membuatnya mudah disesuaikan dengan kebutuhan baru, sekaligus menjadi panduan dalam implementasi database yang lebih terstruktur.</p>
+  </article>
+
+</body>
+</html>

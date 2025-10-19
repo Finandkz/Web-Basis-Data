@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apa Itu Physical Model ?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  }
+</script>
+
+<body class="physical">
+
+ <nav>
+  <div class="garistiga" onclick="toggleMenu()">&#9776;</div>
+  <div class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="profile.html">Profile</a>
+    <a href="https://ubpkarawang.ac.id/" target="_blank">
+      <abbr title="Universitas Buana Perjuangan Karawang">UBP KARAWANG </abbr></a>
+  </div>
+</nav>
+
+
+  <header class="detail-header">
+    <h1>Apa Itu Physical Model ?</h1>
+  </header>
+
+  <article class="detail-content">
+   <div class="detail-img" style="background-image: url('https://i.pinimg.com/736x/e8/e1/7e/e8e17ecc09942035d37b1e4d88ab8319.jpg');"></div>
+    <p style="text-indent:30px  ;">Physical model dalam basis data adalah representasi yang menggambarkan bagaimana data disimpan secara fisik di dalam sistem penyimpanan komputer. Model ini menjelaskan detail teknis seperti struktur file, indeks, partisi, serta metode akses data yang digunakan. Tujuan utama dari physical model adalah memastikan efisiensi dalam penyimpanan, pengambilan, dan pemeliharaan data. Dengan demikian, physical model berhubungan erat dengan performa sistem basis data, karena keputusan pada level ini akan menentukan kecepatan dan keandalan operasi yang dijalankan.</p>
+    
+    <p style="text-indent:30px  ;">Konseptual database terdiri dari empat elemen utama. Entitas adalah objek nyata atau abstrak seperti Mahasiswa, Dosen, atau Mata Kuliah. Atribut menjelaskan detail entitas, misalnya Nama, NIM, atau Jurusan untuk Mahasiswa. Relasi menunjukkan keterhubungan antar entitas, contohnya Mahasiswa “Mengambil” Mata Kuliah. Sementara Kardinalitas menjelaskan jumlah entitas yang terlibat, seperti satu dosen bisa mengajar banyak mata kuliah</p>
+    
+    <p style="text-indent:30px  ;">Dalam Physical Model, tabel dan kolom didefinisikan dengan detail. Misalnya, atribut Nama Mahasiswa bisa diimplementasikan sebagai VARCHAR(100). Indeks juga dibuat untuk mempercepat pencarian data, contohnya indeks pada kolom ID Mahasiswa agar pencarian lebih cepat.</p>
+    
+    <p style="text-indent:30px  ;">Partisi sering dipakai untuk memecah tabel besar menjadi bagian kecil sesuai kriteria tertentu, misalnya berdasarkan tahun transaksi. Ada juga teknik clustering yang mengelompokkan data yang sering diakses bersama dalam satu blok penyimpanan agar akses lebih cepat. Selain itu, kompresi data dipakai untuk menghemat ruang.</p>
+    
+    <p style="text-indent:30px  ;">Physical Model juga mengatur manajemen indeks, pembuatan statistik untuk optimasi query, serta pengaturan keamanan dan otorisasi pengguna. Contohnya, hanya admin yang bisa mengubah struktur tabel, sedangkan pengguna biasa hanya bisa membaca data.</p>
+  
+  </article>
+
+</body>
+</html>
